@@ -1,0 +1,19 @@
+{
+  "name": "sandbox-bolt-static",
+  "version": "1.0.0",
+  "description": "static pages with bolt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Hi'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joekarasek/sandbox-bolt-static.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joekarasek/sandbox-bolt-static/issues"
+  },
+  "homepage": "https://github.com/joekarasek/sandbox-bolt-static#readme"
+}

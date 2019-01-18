@@ -1,0 +1,28 @@
+language: node_js
+node_js:
+  - 10
+
+# see more conditions: https://docs.travis-ci.com/user/conditions-v1
+# Stages run sequentially; the jobs in them run in parallel
+stages:
+  - Prep
+#  - Test Live Site
+#  - name: Post
+#    if: branch = master
+
+jobs:
+  include:
+    - stage: Prep
+      name: 'Smoke Tests: Install, Lint, Unit'
+      install:
+        - npm install
+      script:
+        - npm test
+      cache:
+        directories:
+          - node_modules
+
+notifications:
+  email:
+    on_success: never
+    on_failure: never # @todo re-enable
