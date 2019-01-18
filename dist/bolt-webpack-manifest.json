@@ -1,0 +1,18 @@
+{
+  "name": "Bolt Manifest",
+  "0-bundle-2c48862c04cf55d6f88d.js": "//0-bundle-2c48862c04cf55d6f88d.js",
+  "1-bundle-861f2bf3817d7850085a.js": "//1-bundle-861f2bf3817d7850085a.js",
+  "2-bundle-e309c72e0e8f5783df94.js": "//2-bundle-e309c72e0e8f5783df94.js",
+  "bolt-global.css": "//bolt-global.css",
+  "bolt-global.js": "//bolt-global.js",
+  "bolt-band.js": "//bolt-band-bundle-33ed609f18b68f0b463c.js",
+  "vendors~bolt-icon.js": "//vendors~bolt-icon-bundle-3b78d451f19747339a6d.js",
+  "vendors~bolt-device-viewer.js": "//vendors~bolt-device-viewer-bundle-eb81ef812d9303a39582.js",
+  "3-bundle-a35b55a6600244f98b69.js": "//3-bundle-a35b55a6600244f98b69.js",
+  "vendors~bolt-copy-to-clipboard.js": "//vendors~bolt-copy-to-clipboard-bundle-68ddd882899b80a749df.js",
+  "vendors~bolt-video.js": "//vendors~bolt-video-bundle-ed19cb7bc1c53566d840.js",
+  "4-bundle-b3717ae2a4c99f36d569.js": "//4-bundle-b3717ae2a4c99f36d569.js",
+  "5-bundle-439ade699e1d7dd16644.js": "//5-bundle-439ade699e1d7dd16644.js",
+  "6-bundle-bd25e59c9973ebce2da2.js": "//6-bundle-bd25e59c9973ebce2da2.js",
+  "7-bundle-edd4ce1589829e8d552f.js": "//7-bundle-edd4ce1589829e8d552f.js"
+}

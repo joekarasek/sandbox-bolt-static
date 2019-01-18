@@ -10,54 +10,54 @@ const config = {
   renderingService: false, // starts PHP service for rendering Twig templates
   openServerAtStart: false,
   // Environmental variable / preset to use
-  env: 'pwa',
+  env: 'static',
   srcDir: './src/pages',
-  buildDir: '../www/build',
-  dataDir: '../www/build/data',
-  wwwDir: '../www',
+  buildDir: './dist',
+  dataDir: './dist/data',
+  wwwDir: './dist',
   startPath: '/',
-  plConfigFile: './config/config.yml',
+  // plConfigFile: './config/config.yml',
   verbosity: 2,
   schemaErrorReporting: 'cli',
   enableCache: true,
   webpackDevServer: {
     enabled: true,
   },
-  extraTwigNamespaces: {
-    bolt: {
-      recursive: true,
-      paths: ['src/templates', '../packages/components'],
-    },
-    pl: {
-      recursive: true,
-      paths: [
-        './src/pages/pattern-lab',
-        /* Example of including additional component paths to include in the main @bolt namespace */
-        // path.relative(process.cwd(), path.dirname(require.resolve('@bolt/components-sticky/package.json'))),
-      ],
-    },
-    'bolt-assets': {
-      recursive: true,
-      paths: ['../www/build'],
-    },
-    utils: {
-      recursive: true,
-      paths: ['./src/components/pattern-lab-utils'],
-    },
-    'bolt-site': {
-      recursive: true,
-      paths: ['src/templates', 'src/components'],
-    },
-  },
-  images: {
-    sets: [
-      {
-        base: './src/assets/images',
-        glob: '**',
-        dist: '../www/images',
-      },
-    ],
-  },
+  // extraTwigNamespaces: {
+  //   bolt: {
+  //     recursive: true,
+  //     paths: ['src/templates', '../packages/components'],
+  //   },
+  //   pl: {
+  //     recursive: true,
+  //     paths: [
+  //       './src/pages/pattern-lab',
+  //       /* Example of including additional component paths to include in the main @bolt namespace */
+  //       // path.relative(process.cwd(), path.dirname(require.resolve('@bolt/components-sticky/package.json'))),
+  //     ],
+  //   },
+  //   'bolt-assets': {
+  //     recursive: true,
+  //     paths: ['../www/build'],
+  //   },
+  //   utils: {
+  //     recursive: true,
+  //     paths: ['./src/components/pattern-lab-utils'],
+  //   },
+  //   'bolt-site': {
+  //     recursive: true,
+  //     paths: ['src/templates', 'src/components'],
+  //   },
+  // },
+  // images: {
+  //   sets: [
+  //     {
+  //       base: './src/assets/images',
+  //       glob: '**',
+  //       dist: '../www/images',
+  //     },
+  //   ],
+  // },
 
   // Currently only supports a 'scss' key with an array of Sass partials to pull in.
   globalData: {
@@ -72,10 +72,10 @@ const config = {
   components: {
     global: [
       '@bolt/global',
-      '@bolt/schema-form',
+      // '@bolt/schema-form',
       '@bolt/components-placeholder',
       '@bolt/components-action-blocks',
-      '@bolt/components-dropdown',
+      // '@bolt/components-dropdown',
       '@bolt/components-background',
       '@bolt/components-background-shapes',
       '@bolt/components-band',
@@ -87,7 +87,7 @@ const config = {
       '@bolt/components-card',
       '@bolt/components-chip',
       '@bolt/components-chip-list',
-      '@bolt/components-code-snippet',
+      // '@bolt/components-code-snippet',
       '@bolt/components-copy-to-clipboard',
       '@bolt/components-device-viewer',
       '@bolt/components-figure',
@@ -102,17 +102,17 @@ const config = {
       '@bolt/components-navbar',
       '@bolt/components-navlink',
       '@bolt/components-logo',
-      '@bolt/components-page-footer',
+      // '@bolt/components-page-footer',
       '@bolt/components-page-header',
       '@bolt/components-pagination',
       '@bolt/components-share',
-      '@bolt/components-search-filter',
+      // '@bolt/components-search-filter',
       '@bolt/components-site',
       '@bolt/components-smooth-scroll',
       '@bolt/components-sticky',
-      '@bolt/components-table',
+      // '@bolt/components-table',
       '@bolt/components-teaser',
-      '@bolt/components-text',
+      // '@bolt/components-text',
       '@bolt/components-tooltip',
       '@bolt/components-ul',
       '@bolt/components-ol',
@@ -128,34 +128,34 @@ const config = {
        * webpack-cli directly using Bolt's webpack config)
        */
       // Keeping PL specific assets here so we can remove an extra JS + CSS request from the site
-      resolve.sync('./src/index.scss'),
-      resolve.sync('./src/index.js'),
+      // resolve.sync('./src/index.scss'),
+      // resolve.sync('./src/index.js'),
     ],
     individual: [
       // example specifying a standalone component's CSS and JS individually
-      {
-        name: 'loadcss',
-        js: './src/components/loadcss-fix/loadcss-fix.js',
-        //   scss: ./src/index.scss',
-      },
-      '@bolt/components-critical-fonts',
-      '@bolt/components-critical-css-vars',
+      // {
+      //   name: 'loadcss',
+      //   js: './src/components/loadcss-fix/loadcss-fix.js',
+      //   //   scss: ./src/index.scss',
+      // },
+      // '@bolt/components-critical-fonts',
+      // '@bolt/components-critical-css-vars',
     ],
   },
-  copy: [
-    {
-      from: `src/assets/bolt-sketch.zip`,
-      to: path.join(__dirname, '../www/assets'),
-      flatten: true,
-    },
-    {
-      from: `${path.dirname(
-        resolve.sync('@bolt/global/package.json'),
-      )}/favicons/bolt`,
-      to: path.join(__dirname, '../www/'),
-      flatten: true,
-    },
-  ],
+  // copy: [
+  //   {
+  //     from: `src/assets/bolt-sketch.zip`,
+  //     to: path.join(__dirname, '../www/assets'),
+  //     flatten: true,
+  //   },
+  //   {
+  //     from: `${path.dirname(
+  //       resolve.sync('@bolt/global/package.json'),
+  //     )}/favicons/bolt`,
+  //     to: path.join(__dirname, '../www/'),
+  //     flatten: true,
+  //   },
+  // ],
   alterTwigEnv: [
     {
       file: `${path.dirname(
